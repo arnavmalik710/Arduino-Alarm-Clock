@@ -2,23 +2,24 @@
 
 ## Overview
 
-An Arduino-based digital alarm clock built using the Arduino UNO and DS1307 RTC module. The system displays real-time date and time on a 16×2 LCD and supports up to four configurable alarms with buzzer notification.
+An Arduino-based digital alarm clock developed using the Arduino UNO and DS1307 Real-Time Clock (RTC) module. The system displays real-time date and time on a 16×2 LCD and supports four independently configurable alarms with EEPROM-based storage.
 
 ## Aim
 
-To design and implement a microcontroller-based alarm clock capable of displaying real-time date and time and generating alarm notifications at preset timings.
+To design and implement a microcontroller-based digital alarm clock capable of displaying accurate real-time date and time while providing configurable alarm notifications.
 
 ## Features
 
 - Real-time clock using DS1307 RTC
 - Date and day display
 - 16×2 LCD user interface
-- Four configurable alarms
-- Push-button based configuration
-- Buzzer alarm notification
+- Four independently configurable alarms
+- Enable/disable individual alarms
 - EEPROM storage for alarm settings
+- Push-button based configuration
+- Audible buzzer notifications
 - Manual alarm control
-- Battery-backed timekeeping through RTC module
+- RTC battery backup support
 
 ## Components Used
 
@@ -27,25 +28,28 @@ To design and implement a microcontroller-based alarm clock capable of displayin
 - 16×2 LCD Display
 - 4 Push Buttons
 - Active Buzzer
-- Jumper Wires
 - Breadboard
+- Jumper Wires
 - RTC Backup Battery
+
+## Working Principle
+
+The DS1307 RTC module continuously maintains current time and date information. Arduino UNO reads this data through I2C communication and displays it on the LCD.
+
+Users can configure up to four alarms using push buttons. Alarm settings are stored in EEPROM memory, allowing them to persist even after power loss.
+
+When the current time matches an enabled alarm time, the buzzer is activated to alert the user.
 
 ## Repository Structure
 
-- code/ – Arduino source code
-- docs/ – Project documentation
-- diagrams/ – Block diagram, circuit diagram and flowchart
-
-## Working
-
-The Arduino continuously reads date and time data from the DS1307 RTC module. The current time is displayed on the LCD while the user can configure alarms using push buttons. When the current time matches a stored alarm value, the buzzer is activated.
+text Arduino-Alarm-Clock/ │ ├── README.md ├── code/ │   └── AlarmClock.ino │ ├── docs/ │   ├── aim.md │   ├── introduction.md │   ├── components.md │   ├── working-principle.md │   ├── algorithm.md │   ├── procedure.md │   ├── precautions.md │   └── conclusion.md │ └── diagrams/ 
 
 ## Future Improvements
 
 - Snooze functionality
+- 12-hour AM/PM display mode
+- Custom alarm tones
 - OLED display support
-- Multiple alarm profiles
 - Temperature monitoring
 - Wireless time synchronization
 
