@@ -44,6 +44,18 @@ When the current time matches an enabled alarm time, the buzzer is activated to 
 
 text Arduino-Alarm-Clock/ │ ├── README.md ├── code/ │   └── AlarmClock.ino │ ├── docs/ │   ├── aim.md │   ├── introduction.md │   ├── components.md │   ├── working-principle.md │   ├── algorithm.md │   ├── procedure.md │   ├── precautions.md │   └── conclusion.md │ └── diagrams/ 
 
+## Block Diagram
+
+![Block Diagram](diagrams/block-diagram.png)
+
+## Circuit Diagram
+
+![Circuit Diagram](diagrams/circuit-diagram.png)
+
+## Flowchart
+
+![Flowchart](diagrams/flowchart.png)
+
 ## Future Improvements
 
 - Snooze functionality
